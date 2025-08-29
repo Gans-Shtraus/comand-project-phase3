@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, type JSX } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllThemesThunk } from "@/entities/Theme/redux/thunk";
-import type { AppDispatch } from "@/app/redux/store";
-import type { RootState } from "@reduxjs/toolkit/query";
+import type { AppDispatch, RootState } from "@/app/redux/store";
+import type { Theme } from "@/entities/Theme/model";
 
-export const Theme: React.FC = () => {
+export function Theme(): JSX.Element {
   const dispatch = useDispatch<AppDispatch>();
 
   // Получаем темы, загрузку и ошибку из состояния
@@ -23,10 +23,10 @@ export const Theme: React.FC = () => {
     <div>
       <h2>Темы</h2>
       <ul>
-        {themes.map((theme) => (
+        {themes.map((theme: Theme) => (
           <li key={theme.id}>{theme.name}</li>
         ))}
       </ul>
     </div>
   );
-};
+}
