@@ -1,12 +1,13 @@
 export type Theme = {
-  id?: number;
+  themeId?: number;
   name: string;
-  description?: string;
+  slug?: string;
 };
 
 export type Question = {
   id?: number;
-  text: string;
+  questionText: string;
+  correctAnswer: string;
   themeId?: number;
   // Добавьте другие поля, если необходимо
 };

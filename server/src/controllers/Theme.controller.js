@@ -1,15 +1,16 @@
-const ThemeService = require('../services/Theme.service');
-const formatResponse = require('../utils/formatResponse');
+const ThemeService = require("../services/Theme.service");
+const formatResponse = require("../utils/formatResponse");
 
 class ThemeController {
   static async getAll(req, res) {
     try {
       const themes = await ThemeService.getDistinctThemes();
-      return res.status(200).json(formatResponse(200, 'Темы получены', themes));
+      console.log(themes);
+      return res.status(200).json(formatResponse(200, "Темы получены", themes));
     } catch ({ message }) {
       res
         .status(500)
-        .json(formatResponse(500, 'Внутренняя ошибка сервера', null, message));
+        .json(formatResponse(500, "Внутренняя ошибка сервера", null, message));
     }
   }
 
@@ -19,11 +20,11 @@ class ThemeController {
       const questions = await ThemeService.getByThemeId(themeId);
       return res
         .status(200)
-        .json(formatResponse(200, 'Вопросы по теме получены', questions));
+        .json(formatResponse(200, "Вопросы по теме получены", questions));
     } catch ({ message }) {
       res
         .status(500)
-        .json(formatResponse(500, 'Внутренняя ошибка сервера', null, message));
+        .json(formatResponse(500, "Внутренняя ошибка сервера", null, message));
     }
   }
 
@@ -32,11 +33,11 @@ class ThemeController {
       const board = await ThemeService.getBoard();
       return res
         .status(200)
-        .json(formatResponse(200, 'Доска вопросов получена', board));
+        .json(formatResponse(200, "Доска вопросов получена", board));
     } catch ({ message }) {
       res
         .status(500)
-        .json(formatResponse(500, 'Внутренняя ошибка сервера', null, message));
+        .json(formatResponse(500, "Внутренняя ошибка сервера", null, message));
     }
   }
 
@@ -45,15 +46,13 @@ class ThemeController {
       const themes = await ThemeService.getThemes();
       return res
         .status(200)
-        .json(formatResponse(200, 'Темы из таблицы получены', themes));
+        .json(formatResponse(200, "Темы из таблицы получены", themes));
     } catch ({ message }) {
       res
         .status(500)
-        .json(formatResponse(500, 'Внутренняя ошибка сервера', null, message));
+        .json(formatResponse(500, "Внутренняя ошибка сервера", null, message));
     }
   }
 }
 
 module.exports = ThemeController;
-
-
