@@ -20,7 +20,7 @@ export function Theme(): JSX.Element {
   if (loading) return <div className={s.status}>Загрузка...</div>;
   if (error) return <div className={s.status}>Ошибка: {error}</div>;
 
-  const onThemeClick = (themeId: number) => {
+  const onThemeClick = (themeId: number): void => {
     navigate(`/question/${themeId}`);
   };
 

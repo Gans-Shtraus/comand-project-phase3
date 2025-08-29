@@ -1,9 +1,10 @@
 .heading {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Orbitron", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 24px;
-  color: #4a4a4a;
-  font-weight: 600;
+  color: #00fff7;
+  font-weight: 700;
   text-align: center;
+  text-shadow: 0 0 8px #00fff7, 0 0 12px #ff00ff, 0 0 20px #ff00ff;
 }
 
 .status {
@@ -30,7 +31,7 @@
 .cardInner {
   position: relative;
   width: 100%;
-  padding-top: 140%; /* соотношение сторон, высота 140% ширины */
+  padding-top: 140%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
@@ -48,38 +49,42 @@
   right: 0;
   bottom: 0;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(96, 125, 139, 0.25);
-  background-color: #dbe9f4;
+  background: linear-gradient(135deg, #0f2233, #1b1429);
+  box-shadow: 0 0 10px #00fff7, inset 0 0 15px #ff00ff;
   backface-visibility: hidden;
 
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 16px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Orbitron", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
-  color: #2d3e50;
+  color: #00fff7;
+  text-shadow: 0 0 5px #00fff7, 0 0 10px #ff00ff;
 }
 
 .cardBack {
-  background-color: #aacce6;
+  background: linear-gradient(135deg, #1b1429, #0f2233);
   transform: rotateY(180deg);
   flex-direction: column;
   gap: 12px;
 }
 
 .cardBack button {
-  background-color: #708dbb;
+  background: #ff00ff;
   border: none;
   border-radius: 8px;
   padding: 10px 14px;
-  color: white;
-  font-weight: 600;
+  color: #121212;
+  font-weight: 700;
   cursor: pointer;
   width: 100%;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cardBack button:hover {
-  background-color: #557aa0;
+  background: #00fff7;
+  color: #121212;
+  box-shadow: 0 0 20px #00fff7, 0 0 40px #00fff7;
 }
