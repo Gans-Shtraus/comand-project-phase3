@@ -4,11 +4,11 @@ import mySound from "@/assets/mytrack.mp3";
 import s from "../style/style.module.css";
 
 export function Music(): JSX.Element {
-  const [volume, setVolume] = useState(0.5); // громкость по умолчанию 0.5
+  const [volume, setVolume] = useState(0.5);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const [play, { pause }] = useSound(mySound, {
-    volume, // здесь используем значение громкости
+    volume,
     onplay: () => setIsPlaying(true),
     onpause: () => setIsPlaying(false),
     onend: () => setIsPlaying(false),
