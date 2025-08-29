@@ -1,10 +1,10 @@
-"use strict";
-const bcrypt = require("bcrypt");
-const { Model } = require("sequelize");
+'use strict';
+const bcrypt = require('bcrypt');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate({ Task }) {
-      this.hasMany(Task, { foreignKey: "user_id" });
+      this.hasMany(Task, { foreignKey: 'user_id' });
     }
 
     static validateEmail(email) {
@@ -34,37 +34,37 @@ module.exports = (sequelize, DataTypes) => {
     static validateSingUpData({ username, email, password }) {
       if (
         !username ||
-        typeof username !== "string" ||
+        typeof username !== 'string' ||
         username.trim().length === 0
       ) {
         return {
           isValid: false,
-          error: "Поле username не должно быть пустым",
+          error: 'Поле username не должно быть пустым',
         };
       }
 
       if (
         !email ||
-        typeof email !== "string" ||
+        typeof email !== 'string' ||
         email.trim().length === 0 ||
         !this.validateEmail(email)
       ) {
         return {
           isValid: false,
-          error: "Поле email должн быть валидным",
+          error: 'Поле email должн быть валидным',
         };
       }
 
       if (
         !password ||
-        typeof password !== "string" ||
+        typeof password !== 'string' ||
         password.trim().length === 0 ||
         !this.validatePassword(password)
       ) {
         return {
           isValid: false,
           error:
-            "Поле password не должно быть пустым, должен содержать одну большую букыу, одну маленькую, один специальный символ и не должен быть короче 8 символов",
+            'Поле password не должно быть пустым, должен содержать одну большую букыу, одну маленькую, один специальный символ и не должен быть короче 8 символов',
         };
       }
 
@@ -75,21 +75,21 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     static validateSingInData({ email, password }) {
-      if (!email || typeof email !== "string" || email.trim().length === 0) {
+      if (!email || typeof email !== 'string' || email.trim().length === 0) {
         return {
           isValid: false,
-          error: "Поле email не должно быть пустым",
+          error: 'Поле email не должно быть пустым',
         };
       }
 
       if (
         !password ||
-        typeof password !== "string" ||
+        typeof password !== 'string' ||
         password.trim().length === 0
       ) {
         return {
           isValid: false,
-          error: "Поле password не должно быть пустым",
+          error: 'Поле password не должно быть пустым',
         };
       }
 
@@ -102,24 +102,24 @@ module.exports = (sequelize, DataTypes) => {
     static validateUpdateData({ username, email }) {
       if (
         !username ||
-        typeof username !== "string" ||
+        typeof username !== 'string' ||
         username.trim().length === 0
       ) {
         return {
           isValid: false,
-          error: "Поле username не должно быть пустым",
+          error: 'Поле username не должно быть пустым',
         };
       }
 
       if (
         !email ||
-        typeof email !== "string" ||
+        typeof email !== 'string' ||
         email.trim().length === 0 ||
         !this.validateEmail(email)
       ) {
         return {
           isValid: false,
-          error: "Поле email должн быть валидным",
+          error: 'Поле email должн быть валидным',
         };
       }
 
@@ -134,10 +134,11 @@ module.exports = (sequelize, DataTypes) => {
       email: DataTypes.STRING,
       username: DataTypes.STRING,
       password: DataTypes.STRING,
+      points: DataTypes.NUMBER,
     },
     {
       sequelize,
-      modelName: "User",
+      modelName: 'User',
       hooks: {
         beforeCreate: async (newUser) => {
           const hashedPassword = await bcrypt.hash(newUser.password, 10);
