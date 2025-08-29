@@ -10,6 +10,7 @@ userRouter
   .post("/signin", UserController.signIn)
   .post("/signout", UserController.signOut)
   .put("/:id", UserController.updateById)
-  .delete("/:id", UserController.deleteById);
+  .delete("/:id", UserController.deleteById)
+  .put("/points/:id", UserController.addPoints);
 
 module.exports = userRouter;

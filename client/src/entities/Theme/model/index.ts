@@ -9,6 +9,7 @@ export type Question = {
   questionText: string;
   correctAnswer: string;
   themeId?: number;
+  answerOptions: string[];
   // Добавьте другие поля, если необходимо
 };
 

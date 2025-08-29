@@ -379,6 +379,35 @@ class UserController {
         .json(formatResponse(500, "Внутренняя ошибка сервера", null, message));
     }
   }
+  static async addPoints(req, res) {
+    const { id } = req.params;
+    const { points } = req.body;
+    if (isNaN(id))
+      return res
+        .status(400)
+        .json(
+          formatResponse(
+            400,
+            "Невалидный id пользователя",
+            null,
+            "Невалидный id пользователя"
+          )
+        );
+    try {
+      const user = await UserService.addPoints(id, points);
+      return res
+        .status(200)
+        .json(formatResponse(200, `Успешно добавлены очки`, user));
+    } catch ({ message }) {
+      console.log(
+        "=============UserController.addPoints=============",
+        message
+      );
+      res
+        .status(500)
+        .json(formatResponse(500, "Внутренняя ошибка сервера", null, message));
+    }
+  }
 }
 
 module.exports = UserController;
