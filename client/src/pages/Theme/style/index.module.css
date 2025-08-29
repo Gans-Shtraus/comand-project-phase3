@@ -1,0 +1,75 @@
+/* index.module.css */
+
+:root {
+  --pixel-size: 4px;
+  --primary-color: #9c8ac7; /* нежный фиолетовый */
+  --background-color: #f5f3fa; /* светлый фиолетово-серый */
+  --text-color: #5a4e7c; /* глубокий фиолетовый */
+  --outline-color: #d6cde7; /* нежный светло-фиолетовый */
+  --shadow-color: #b4a7d6; /* мягкий фиолетовый теневой */
+  --hover-color: #c6bbf2; /* светлый лавандовый */
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+  color: var(--text-color);
+  margin: 24px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 1px 1px var(--shadow-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pixel-size);
+}
+
+li {
+  background-color: #e9e7f5; /* очень светлый лавандовый */
+  border-radius: 12px;
+  border: 2px solid var(--outline-color);
+  box-shadow: 2px 2px 6px var(--shadow-color);
+  padding: 14px 26px;
+  font-size: 1rem;
+  cursor: default;
+  user-select: none;
+  color: var(--text-color);
+  min-width: 150px;
+  text-align: center;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+li:hover {
+  background-color: var(--hover-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 4px 4px 8px var(--shadow-color);
+}
+
+div {
+  border-radius: 20px;
+  border: 3px solid var(--outline-color);
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  user-select: none;
+  background-color: #f0eff7; /* теплый светлый оттенок */
+  box-shadow: 0 4px 15px rgba(156, 138, 199, 0.25);
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
