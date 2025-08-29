@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       questionText: DataTypes.STRING,
       correctAnswer: DataTypes.STRING,
+      answerOptions: DataTypes.JSON, // Массив всех вариантов ответов
       points: DataTypes.INTEGER,
       themeId: DataTypes.INTEGER,
     },

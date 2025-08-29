@@ -17,6 +17,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      answerOptions: {
+        type: Sequelize.JSON, // Массив всех вариантов ответов
+        allowNull: false,
+      },
       points: {
         type: Sequelize.INTEGER,
         allowNull: false,
