@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "@/shared/hooks/reduxHooks";
 import type { JSX } from "react";
 import { Link } from "react-router";
 import s from "../style/style.module.css";
+import { Music } from "@/widgets";
 
 export function NavBar(): JSX.Element {
   const { user } = useAppSelector((store) => store.userReducer);
@@ -29,6 +30,8 @@ export function NavBar(): JSX.Element {
           <Link to="/tableresult">
             <button>Таблица результатов</button>
           </Link>
+
+          <Music />
           <button onClick={logoutUser}>Выпилиться </button>
         </>
       ) : (
