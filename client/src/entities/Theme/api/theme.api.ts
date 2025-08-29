@@ -6,6 +6,7 @@ export class ThemeApi {
   // Получить все темы (distinct themes)
   static async getAll(): Promise<IApiResponse<Theme[]>> {
     const { data } = await axiosInstance.get("/themes");
+    console.log(data);
     return data;
   }
 
