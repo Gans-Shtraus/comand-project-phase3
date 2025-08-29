@@ -11,6 +11,12 @@ module.exports = {
           questionText:
             "Какая гора считается самой 'ленивой' среди альпинистов?",
           correctAnswer: 'Эверест (потому что на неё все хотят взобраться)',
+          answerOptions: JSON.stringify([
+            'Эверест (потому что на неё все хотят взобраться)',
+            'Килиманджаро',
+            'Монблан',
+            'Арарат',
+          ]),
           points: 100,
           themeId: 1,
           createdAt: new Date(),
@@ -19,6 +25,12 @@ module.exports = {
         {
           questionText: 'Почему гора Фудзияма никогда не простужается?',
           correctAnswer: 'У неё всегда есть снежная шапка',
+          answerOptions: JSON.stringify([
+            'У неё всегда есть снежная шапка',
+            'Она занимается йогой',
+            'Пьёт горячий чай',
+            'Носит тёплые носки',
+          ]),
           points: 200,
           themeId: 1,
           createdAt: new Date(),
@@ -27,6 +39,12 @@ module.exports = {
         {
           questionText: 'Какая гора самая музыкальная?',
           correctAnswer: "Эльбрус (звучит как 'альт-брас')",
+          answerOptions: JSON.stringify([
+            "Эльбрус (звучит как 'альт-брас')",
+            'Гималаи',
+            'Анды',
+            'Альпы',
+          ]),
           points: 300,
           themeId: 1,
           createdAt: new Date(),
@@ -35,6 +53,12 @@ module.exports = {
         {
           questionText: 'Почему альпинисты никогда не берут в горы будильник?',
           correctAnswer: 'Потому что горы сами будят на рассвете',
+          answerOptions: JSON.stringify([
+            'Потому что горы сами будят на рассвете',
+            'Боятся разбудить медведей',
+            'Будильники не работают на высоте',
+            'Предпочитают спать до обеда',
+          ]),
           points: 400,
           themeId: 1,
           createdAt: new Date(),
@@ -43,6 +67,12 @@ module.exports = {
         {
           questionText: 'Какая гора лучше всех играет в прятки?',
           correctAnswer: 'Любая в тумане',
+          answerOptions: JSON.stringify([
+            'Любая в тумане',
+            'Эверест',
+            'К2',
+            'Мауна-Кеа',
+          ]),
           points: 500,
           themeId: 1,
           createdAt: new Date(),
@@ -51,6 +81,12 @@ module.exports = {
         {
           questionText: 'Почему горы никогда не опаздывают на встречи?',
           correctAnswer: 'Они всегда на месте уже миллионы лет',
+          answerOptions: JSON.stringify([
+            'Они всегда на месте уже миллионы лет',
+            'У них есть навигатор',
+            'Они очень пунктуальные',
+            'Боятся опоздать на землетрясение',
+          ]),
           points: 600,
           themeId: 1,
           createdAt: new Date(),
@@ -61,6 +97,12 @@ module.exports = {
         {
           questionText: 'Почему еноты всегда моют еду перед едой?',
           correctAnswer: 'Они помешаны на чистоте (и у них лапки-мочалки)',
+          answerOptions: JSON.stringify([
+            'Они помешаны на чистоте (и у них лапки-мочалки)',
+            'Так учила мама',
+            'Боятся микробов',
+            'Это модно',
+          ]),
           points: 100,
           themeId: 2,
           createdAt: new Date(),
@@ -69,6 +111,12 @@ module.exports = {
         {
           questionText: 'Какая профессия лучше всего подходит еноту?',
           correctAnswer: 'Посудомойщик или грабитель (маска уже есть)',
+          answerOptions: JSON.stringify([
+            'Посудомойщик или грабитель (маска уже есть)',
+            'Учитель',
+            'Врач',
+            'Полицейский',
+          ]),
           points: 200,
           themeId: 2,
           createdAt: new Date(),
@@ -78,6 +126,12 @@ module.exports = {
           questionText: 'Почему еноты отличные программисты?',
           correctAnswer:
             'Они мастера отладки (debugging) - всё перебирают лапками',
+          answerOptions: JSON.stringify([
+            'Они мастера отладки (debugging) - всё перебирают лапками',
+            'Любят технологии',
+            'Хорошо видят в темноте',
+            'Умеют быстро печатать',
+          ]),
           points: 300,
           themeId: 2,
           createdAt: new Date(),
@@ -86,6 +140,12 @@ module.exports = {
         {
           questionText: 'Что общего у енота и хакера?',
           correctAnswer: 'Оба работают ночью в маске и роются в чужих данных',
+          answerOptions: JSON.stringify([
+            'Оба работают ночью в маске и роются в чужих данных',
+            'Оба любят чёрный цвет',
+            'Оба не спят днём',
+            'Оба умные',
+          ]),
           points: 400,
           themeId: 2,
           createdAt: new Date(),
@@ -95,6 +155,12 @@ module.exports = {
           questionText:
             'Почему еноты никогда не становятся поварами в ресторанах?',
           correctAnswer: 'Слишком долго моют каждый ингредиент',
+          answerOptions: JSON.stringify([
+            'Слишком долго моют каждый ингредиент',
+            'Слишком много едят',
+            'Не умеют готовить',
+            'Боятся огня',
+          ]),
           points: 500,
           themeId: 2,
           createdAt: new Date(),
@@ -103,6 +169,12 @@ module.exports = {
         {
           questionText: 'Какой социальной сетью пользуются еноты?',
           correctAnswer: 'Trash-agram (мусор + Instagram)',
+          answerOptions: JSON.stringify([
+            'Trash-agram (мусор + Instagram)',
+            'Facebook',
+            'TikTok',
+            'LinkedIn',
+          ]),
           points: 600,
           themeId: 2,
           createdAt: new Date(),
@@ -113,6 +185,12 @@ module.exports = {
         {
           questionText: 'Какая страна самая вежливая?',
           correctAnswer: 'Канада (извиняются даже за хорошую погоду)',
+          answerOptions: JSON.stringify([
+            'Канада (извиняются даже за хорошую погоду)',
+            'Япония',
+            'Великобритания',
+            'Дания',
+          ]),
           points: 100,
           themeId: 3,
           createdAt: new Date(),
@@ -121,6 +199,12 @@ module.exports = {
         {
           questionText: 'В какой стране лучше всего изучать геометрию?',
           correctAnswer: 'В Египте (пирамиды - лучшие учебные пособия)',
+          answerOptions: JSON.stringify([
+            'В Египте (пирамиды - лучшие учебные пособия)',
+            'В Греции',
+            'В Италии',
+            'В России',
+          ]),
           points: 200,
           themeId: 3,
           createdAt: new Date(),
@@ -129,6 +213,12 @@ module.exports = {
         {
           questionText: 'Почему в Швейцарии самые точные часы?',
           correctAnswer: 'Потому что опоздание там считается преступлением',
+          answerOptions: JSON.stringify([
+            'Потому что опоздание там считается преступлением',
+            'Там живут часовщики',
+            'Все носят часы',
+            'Время там идёт медленнее',
+          ]),
           points: 300,
           themeId: 3,
           createdAt: new Date(),
@@ -137,6 +227,12 @@ module.exports = {
         {
           questionText: 'Какая страна никогда не проигрывает в футбол дома?',
           correctAnswer: 'Бразилия (там футбол - это религия)',
+          answerOptions: JSON.stringify([
+            'Бразилия (там футбол - это религия)',
+            'Германия',
+            'Аргентина',
+            'Испания',
+          ]),
           points: 400,
           themeId: 3,
           createdAt: new Date(),
@@ -145,6 +241,12 @@ module.exports = {
         {
           questionText: 'В какой стране проще всего стать королём?',
           correctAnswer: 'В Таиланде (там 20 тысяч принцев)',
+          answerOptions: JSON.stringify([
+            'В Таиланде (там 20 тысяч принцев)',
+            'В Монако',
+            'В Лихтенштейне',
+            'В Сан-Марино',
+          ]),
           points: 500,
           themeId: 3,
           createdAt: new Date(),
@@ -153,6 +255,12 @@ module.exports = {
         {
           questionText: "Какая страна самая 'квадратная'?",
           correctAnswer: 'Ватикан (самая маленькая и почти квадратная)',
+          answerOptions: JSON.stringify([
+            'Ватикан (самая маленькая и почти квадратная)',
+            'Швейцария',
+            'Монако',
+            'Сингапур',
+          ]),
           points: 600,
           themeId: 3,
           createdAt: new Date(),
@@ -163,6 +271,12 @@ module.exports = {
         {
           questionText: 'Почему программисты предпочитают тёмную тему?',
           correctAnswer: 'Потому что light привлекает bugs',
+          answerOptions: JSON.stringify([
+            'Потому что light привлекает bugs',
+            'Экономят электричество',
+            'Выглядит профессионально',
+            'Меньше устают глаза',
+          ]),
           points: 100,
           themeId: 4,
           createdAt: new Date(),
@@ -171,6 +285,12 @@ module.exports = {
         {
           questionText: 'Сколько программистов нужно, чтобы поменять лампочку?',
           correctAnswer: 'Ноль. Это аппаратная проблема',
+          answerOptions: JSON.stringify([
+            'Ноль. Это аппаратная проблема',
+            'Один, но долго',
+            'Три',
+            'Пять',
+          ]),
           points: 200,
           themeId: 4,
           createdAt: new Date(),
@@ -179,6 +299,12 @@ module.exports = {
         {
           questionText: 'Почему программисты путают Хэллоуин и Рождество?',
           correctAnswer: 'Потому что Oct 31 == Dec 25',
+          answerOptions: JSON.stringify([
+            'Потому что Oct 31 == Dec 25',
+            'Оба страшные',
+            'Оба в октябре',
+            'Забывают даты',
+          ]),
           points: 300,
           themeId: 4,
           createdAt: new Date(),
@@ -187,6 +313,12 @@ module.exports = {
         {
           questionText: 'Какая самая страшная фраза для программиста?',
           correctAnswer: 'Работает на моей машине',
+          answerOptions: JSON.stringify([
+            'Работает на моей машине',
+            'Нет интернета',
+            'Код не компилируется',
+            'Заканчивается кофе',
+          ]),
           points: 400,
           themeId: 4,
           createdAt: new Date(),
@@ -195,6 +327,12 @@ module.exports = {
         {
           questionText: 'Почему программисты не любят природу?',
           correctAnswer: 'Слишком много багов и нет WiFi',
+          answerOptions: JSON.stringify([
+            'Слишком много багов и нет WiFi',
+            'Нет розеток',
+            'Слишком яркое солнце',
+            'Много шума',
+          ]),
           points: 500,
           themeId: 4,
           createdAt: new Date(),
@@ -203,6 +341,12 @@ module.exports = {
         {
           questionText: 'Что сказал рекурсивный программист перед смертью?',
           correctAnswer: 'Что сказал рекурсивный программист перед смертью?',
+          answerOptions: JSON.stringify([
+            'Что сказал рекурсивный программист перед смертью?',
+            'До свидания',
+            'Привет, мир!',
+            'Ошибка сегментации',
+          ]),
           points: 600,
           themeId: 4,
           createdAt: new Date(),
@@ -213,6 +357,12 @@ module.exports = {
         {
           questionText: 'Какую ошибку совершали люди тысячи лет?',
           correctAnswer: 'Думали, что Земля плоская',
+          answerOptions: JSON.stringify([
+            'Думали, что Земля плоская',
+            'Что динозавры не вымерли',
+            'Что Атлантида существует',
+            'Что Луна из сыра',
+          ]),
           points: 100,
           themeId: 6,
           createdAt: new Date(),
@@ -221,6 +371,12 @@ module.exports = {
         {
           questionText: 'Какое заблуждение было у врачей до 19 века?',
           correctAnswer: 'Что мытьё рук перед операцией не нужно',
+          answerOptions: JSON.stringify([
+            'Что мытьё рук перед операцией не нужно',
+            'Что кровопускание лечит всё',
+            'Что женщины слабее',
+            'Что алкоголь - лекарство',
+          ]),
           points: 200,
           themeId: 6,
           createdAt: new Date(),
@@ -229,6 +385,12 @@ module.exports = {
         {
           questionText: 'Какую ошибку совершила компания Kodak?',
           correctAnswer: 'Проигнорировала цифровую фотографию',
+          answerOptions: JSON.stringify([
+            'Проигнорировала цифровую фотографию',
+            'Не инвестировала в интернет',
+            'Делала только чёрно-белые фото',
+            'Продала патенты',
+          ]),
           points: 300,
           themeId: 6,
           createdAt: new Date(),
@@ -237,6 +399,12 @@ module.exports = {
         {
           questionText: 'Какое заблуждение было у учёных о мозге?',
           correctAnswer: 'Что мы используем только 10% мозга',
+          answerOptions: JSON.stringify([
+            'Что мы используем только 10% мозга',
+            'Что левши глупее',
+            'Что мужчины умнее женщин',
+            'Что размер головы влияет на ум',
+          ]),
           points: 400,
           themeId: 6,
           createdAt: new Date(),
@@ -245,6 +413,12 @@ module.exports = {
         {
           questionText: 'Какую ошибку допустила IBM в 1943 году?',
           correctAnswer: 'Сказала, что миру нужно всего 5 компьютеров',
+          answerOptions: JSON.stringify([
+            'Сказала, что миру нужно всего 5 компьютеров',
+            'Что компьютеры будут размером с дом',
+            'Что интернет не приживётся',
+            'Что мобильные телефоны бесполезны',
+          ]),
           points: 500,
           themeId: 6,
           createdAt: new Date(),
@@ -253,6 +427,12 @@ module.exports = {
         {
           questionText: 'Какое научное заблуждение существовало до Коперника?',
           correctAnswer: 'Что Солнце вращается вокруг Земли',
+          answerOptions: JSON.stringify([
+            'Что Солнце вращается вокруг Земли',
+            'Что атомы неделимы',
+            'Что время абсолютно',
+            'Что пространство плоское',
+          ]),
           points: 600,
           themeId: 6,
           createdAt: new Date(),
