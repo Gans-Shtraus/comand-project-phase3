@@ -3,8 +3,10 @@ const formatResponse = require('../utils/formatResponse');
 const taskRouter = require('./task.routes');
 const userRouter = require('./user.routes');
 const questionRoutes = require('./question.routes');
+const themeRouter = require('./theme.routes');
 
 apiRouter.use('/questions', questionRoutes);
+apiRouter.use('/themes', themeRouter);
 apiRouter.use('/auth', userRouter);
 apiRouter.use('/tasks', taskRouter);
 
