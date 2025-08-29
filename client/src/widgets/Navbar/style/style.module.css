@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #0a0513, #1f0739);
+  box-shadow: 0 0 20px #ff00ff, inset 0 0 30px #00fff7;
+  border-radius: 12px;
+  font-family: "Orbitron", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar span {
+  color: #00fff7;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px #00fff7, 0 0 15px #ff00ff;
+  user-select: none;
+}
+
+.navbar button,
+.navbar a > button {
+  background: #ff00ff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  color: #121212;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar button:hover,
+.navbar a > button:hover {
+  background: #00fff7;
+  color: #121212;
+  box-shadow: 0 0 20px #00fff7, 0 0 40px #00fff7;
+}

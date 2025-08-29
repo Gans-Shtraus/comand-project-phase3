@@ -3,6 +3,7 @@ import { type JSX } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 import Layout from "@/app/layout/ui/Layout";
 import { Auth, MainPage, Question, TaskPage, Theme } from "@/pages";
+import ResultTable from "@/pages/ResultTable/ui/ResultTable";
 
 export default function Router(): JSX.Element {
   return (
@@ -15,6 +16,7 @@ export default function Router(): JSX.Element {
           <Route path="/task" element={<TaskPage />} />
           <Route path="/theme" element={<Theme />} />
           <Route path="/question/:themeId" element={<Question />} />
+          <Route path="/tableresult" element={<ResultTable />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>

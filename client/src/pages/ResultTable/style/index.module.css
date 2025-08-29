@@ -1,0 +1,41 @@
+.resultTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Orbitron", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 20px #ff00ff, inset 0 0 40px #00fff7;
+  background: linear-gradient(135deg, #0a0513, #1f0739);
+  color: #00fff7;
+}
+
+.resultTable th,
+.resultTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #551a60;
+  text-align: left;
+  text-shadow: 0 0 3px #00fff7, 0 0 10px #ff00ff;
+  font-size: 30px;
+}
+
+.resultTable th {
+  background-color: #2a0134;
+  color: #ff00ff;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #ff00ff;
+}
+
+.evenRow {
+  background: linear-gradient(90deg, #1a0033, #33001a);
+}
+
+.oddRow {
+  background: linear-gradient(90deg, #33001a, #1a0033);
+}
+
+.resultTable tr:hover {
+  background: #ff00ff33;
+  cursor: default;
+  color: #000000;
+  text-shadow: none;
+}

@@ -1,6 +1,7 @@
 import { axiosInstance } from "@/shared/lib/axiosInstance";
 import type { IUser } from "../model";
 import type { IApiResponse } from "@/shared/types";
+import type { P } from "node_modules/react-router/dist/development/context-jKip1TFB.d.mts";
 
 export type UserAndToken = { user: IUser; accessToken: string };
 
@@ -30,6 +31,10 @@ export class UserApi {
     points: number
   ): Promise<IApiResponse<null>> {
     const { data } = await axiosInstance.put(`/auth/points/${id}`, { points });
+    return data;
+  }
+  static async getAll(): Promise<IApiResponse<IUser[]>> {
+    const { data } = await axiosInstance.get("/auth/");
     return data;
   }
 }
