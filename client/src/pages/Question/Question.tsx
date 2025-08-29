@@ -36,7 +36,7 @@ export function Question(): JSX.Element {
     if (themeId) {
       dispatch(getQuestionsByThemeIdThunk(themeId));
       setFlippedCards({});
-      setScore(0); // сбрасываем очки при смене темы
+      // Не сбрасываем score здесь, т.к. он грузится из localStorage/user в следующем эффекте
     }
   }, [dispatch, themeId]);
 
@@ -50,27 +50,37 @@ export function Question(): JSX.Element {
     setShuffledAnswers(shuffledMap);
   }, [questions]);
 
+  // Загрузка счета из localStorage или из user при монтировании
   useEffect(() => {
-    if (user) {
-      setScore(user?.points);
+    const savedScore = localStorage.getItem("score");
+    if (savedScore !== null) {
+      setScore(Number(savedScore));
+    } else if (user) {
+      setScore(user.points);
+      localStorage.setItem("score", String(user.points));
     }
   }, [user]);
+
   const toggleFlip = (id: number): void => {
     setFlippedCards((prev) => ({
       ...prev,
       [id]: !prev[id],
     }));
   };
+
   const handleCheckAnswer = async (
     questionId: number,
     selectedAnswer: string
-  ): void => {
+  ): Promise<void> => {
     const question = questions.find((q) => q.id === questionId);
     if (question && selectedAnswer === question.correctAnswer) {
-      setScore((prev) => prev + question.points);
+      setScore((prev) => {
+        const newScore = prev + question.points;
+        localStorage.setItem("score", String(newScore));
+        return newScore;
+      });
       alert("Правильно! Очко добавлено.");
       toggleFlip(questionId);
-      localStorage.setItem("score", String(score + question.points));
       const data = await UserApi.addPoints(Number(user?.id), question.points);
       console.log(data);
     } else {
