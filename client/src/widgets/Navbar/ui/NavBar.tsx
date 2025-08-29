@@ -23,6 +23,9 @@ export function NavBar(): JSX.Element {
           <Link to="/task">
             <button>Todoшка</button>
           </Link>
+          <Link to="/theme">
+            <button>Темы</button>
+          </Link>
           <button onClick={logoutUser}>Выход</button>
         </>
       ) : (

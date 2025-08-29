@@ -1,11 +1,11 @@
-import { axiosInstance } from '@/shared/lib/axiosInstance';
-import type { Question } from '../model';
-import type { IApiResponse } from '@/shared/types';
+import { axiosInstance } from "@/shared/lib/axiosInstance";
+import type { Question } from "../model";
+import type { IApiResponse } from "@/shared/types";
 
-export class QuestionApi {
+export default class QuestionApi {
   // Получить все вопросы
   static async getAll(): Promise<IApiResponse<Question[]>> {
-    const { data } = await axiosInstance.get('/questions');
+    const { data } = await axiosInstance.get("/questions");
     return data;
   }
   // Получить вопрос по id
@@ -15,7 +15,7 @@ export class QuestionApi {
   }
   // Получить случайный вопрос
   static async getRandom(): Promise<IApiResponse<Question>> {
-    const { data } = await axiosInstance.get('/questions/random');
+    const { data } = await axiosInstance.get("/questions/random");
     return data;
   }
   // Получить вопросы по теме
