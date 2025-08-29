@@ -1,0 +1,48 @@
+.volumeSlider {
+  -webkit-appearance: none;
+  width: 150px;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #ff00ff, #00fff7);
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff00ff, inset 0 0 20px #00fff7;
+  transition: background 0.3s ease;
+}
+
+.volumeSlider:hover {
+  background: linear-gradient(90deg, #00fff7, #ff00ff);
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ff00ff;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff00ff, 0 0 35px #ff00ff;
+  transition: background-color 0.3s ease;
+  margin-top: -7px; /* чтобы центрировать по высоте */
+}
+
+.volumeSlider::-webkit-slider-thumb:hover {
+  background: #00fff7;
+  box-shadow: 0 0 20px #00fff7, 0 0 40px #00fff7;
+}
+
+.volumeSlider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ff00ff;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff00ff, 0 0 35px #ff00ff;
+  transition: background-color 0.3s ease;
+}
+
+.volumeSlider::-moz-range-thumb:hover {
+  background: #00fff7;
+  box-shadow: 0 0 20px #00fff7, 0 0 40px #00fff7;
+}
