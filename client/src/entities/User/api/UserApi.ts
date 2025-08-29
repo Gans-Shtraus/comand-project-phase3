@@ -25,4 +25,11 @@ export class UserApi {
     const { data } = await axiosInstance.get("/auth/refreshTokens");
     return data;
   }
+  static async addPoints(
+    id: string,
+    points: number
+  ): Promise<IApiResponse<null>> {
+    const { data } = await axiosInstance.put(`/auth/points/${id}`, { points });
+    return data;
+  }
 }

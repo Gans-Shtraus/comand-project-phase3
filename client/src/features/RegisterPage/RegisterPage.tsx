@@ -2,6 +2,7 @@ import type { IUser } from "@/entities/User/model";
 import { registerUserThunk } from "@/entities/User/redux/thunk";
 import { useAppDispatch } from "@/shared/hooks/reduxHooks";
 import { useState, type JSX } from "react";
+import { useNavigate } from "react-router";
 
 const INITIAL_INPUTS_DATA: IUser = {
   username: "",
@@ -12,6 +13,7 @@ const INITIAL_INPUTS_DATA: IUser = {
 export function RegisterPage(): JSX.Element {
   const [inputs, setInputs] = useState(INITIAL_INPUTS_DATA);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const changeHadler = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
@@ -21,6 +23,7 @@ export function RegisterPage(): JSX.Element {
     e.preventDefault();
     dispatch(registerUserThunk(inputs));
     setInputs(INITIAL_INPUTS_DATA);
+    navigate("/home");
   };
   return (
     <div>

@@ -37,9 +37,9 @@ class UserService {
   }
 
   static async deleteById(id) {
-    console.log('============ >>>>>>>>', id)
+    console.log("============ >>>>>>>>", id);
     const userForDestroy = await this.getById(id);
-    console.log('============ >>>>>>>>', userForDestroy)
+    console.log("============ >>>>>>>>", userForDestroy);
 
     if (!userForDestroy)
       return {
@@ -51,6 +51,13 @@ class UserService {
       error: null,
       data: await userForDestroy.destroy(),
     };
+  }
+  static async addPoints(id, points) {
+    const userForUpdate = await this.getById(id);
+    if (!userForUpdate) return null;
+    userForUpdate.points += points;
+    await userForUpdate.save();
+    return userForUpdate;
   }
 }
 
