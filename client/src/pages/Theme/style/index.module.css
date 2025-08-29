@@ -1,45 +1,53 @@
 /* index.module.css */
+
 .container {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f6fcff; /* очень светлый голубой */
+  font-family: "Orbitron", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a0513, #1f0739);
   max-width: 600px;
   margin: 40px auto;
   padding: 24px;
   border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(150, 190, 220, 0.25);
-  color: #4a4a4a;
+  box-shadow: 0 0 20px #ff00ff, inset 0 0 30px #00fff7;
+  color: #00fff7;
+  user-select: none;
+  text-align: center;
 }
 
 .title {
-  font-weight: 600;
-  color: #557a95; /* мягкий синий */
+  font-weight: 700;
+  color: #ff00ff;
   margin-bottom: 20px;
+  font-size: 2.4rem;
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 8px #ff00ff, 0 0 20px #00fff7, 0 0 30px #00fff7;
 }
 
 .list {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .listItem {
-  background-color: #dbe9f4; /* светлый голубой */
+  background: linear-gradient(135deg, #0b101f, #1a0639);
   margin-bottom: 12px;
   padding: 14px 20px;
   border-radius: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
-  box-shadow: 0 3px 8px rgba(135, 170, 210, 0.6);
+  box-shadow: 0 0 12px #00fff7, 0 0 20px #ff00ff inset;
+  color: #00fff7;
+  font-weight: 600;
+  transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
 .listItem:hover {
-  background-color: #aacce6; /* чуть насыщенный голубой */
-  color: #2d3e50;
-  box-shadow: 0 6px 14px rgba(90, 130, 180, 0.75);
+  background: linear-gradient(135deg, #1a0639, #0b101f);
+  box-shadow: 0 0 18px #ff00ff, 0 0 35px #00fff7 inset;
+  color: #ff00ff;
 }
 
 .listItem:active {
-  background-color: #708dbb; /* насыщенный голубой при нажатии */
-  color: white;
+  background: #ff00ff;
+  color: #1a001a;
   box-shadow: none;
 }
