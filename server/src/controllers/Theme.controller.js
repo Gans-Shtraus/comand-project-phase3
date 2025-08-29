@@ -39,6 +39,19 @@ class ThemeController {
         .json(formatResponse(500, 'Внутренняя ошибка сервера', null, message));
     }
   }
+
+  static async getThemes(req, res) {
+    try {
+      const themes = await ThemeService.getThemes();
+      return res
+        .status(200)
+        .json(formatResponse(200, 'Темы из таблицы получены', themes));
+    } catch ({ message }) {
+      res
+        .status(500)
+        .json(formatResponse(500, 'Внутренняя ошибка сервера', null, message));
+    }
+  }
 }
 
 module.exports = ThemeController;
