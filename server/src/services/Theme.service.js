@@ -1,5 +1,5 @@
 'use strict';
-const { Question, Sequelize } = require('../db/models');
+const { Question, Theme, Sequelize } = require('../db/models');
 
 class ThemeService {
   static async getDistinctThemes() {
@@ -39,6 +39,13 @@ class ThemeService {
     }));
     board.sort((a, b) => Number(a.themeId) - Number(b.themeId));
     return board;
+  }
+
+  static async getThemes() {
+    return await Theme.findAll({
+      attributes: ['id', 'name', 'slug'],
+      order: [['id', 'ASC']],
+    });
   }
 }
 
