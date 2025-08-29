@@ -1,6 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userSlice from "@/entities/User/redux/slice/userSlice";
 import taskSlice from "@/entities/Task/redux/slice/taskSlice";
+import questionSlice from "@/entities/Question/redux/slice/questionSlice";
+import themeSlice from "@/entities/Theme/redux/slice/theme.slice";
 
 const storeOptions = {
   reducer: {
@@ -8,6 +10,8 @@ const storeOptions = {
     // ? advice: adviceSlice,
     userReducer: userSlice,
     taskSlice,
+    questionSlice,
+    themeSlice,
   },
 };
 // * Создание store
